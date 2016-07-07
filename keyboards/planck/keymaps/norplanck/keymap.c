@@ -25,8 +25,8 @@ extern keymap_config_t keymap_config;
 #define RAISE M(_RAISE)
 #define L3 M(_L3)
 #define M_BL 5
-#define M_TIDL(6)		// AltGR + ¨, space = ~
-#define M_CART(7)		// Shift + ¨, space = ^
+#define M_TIDL 6		// AltGR + ¨, space = ~
+#define M_CART 7		// Shift + ¨, space = ^
 #define EXT_PLV M(13)
 #define TOG_OUT M(14)
 
@@ -107,7 +107,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   {_______, _______, _______, 	RALT(KC_E), _______, _______, _______, _______, 	_______, 	_______, 	_______, 	_______},
   {_______, _______, _______, 	_______, 	_______, _______, _______, RALT(KC_M), 	_______,	_______, 	_______, 	_______},
   {_______, _______, _______, 	_______, 	_______, _______, _______, _______, 	_______, 	_______, 	_______, 	_______}
-}
+},
 
 /* Adjust (Lower + Raise)
  * ,-----------------------------------------------------------------------------------.
@@ -225,13 +225,13 @@ const macro_t *action_get_macro(keyrecord_t *record, uint8_t id, uint8_t opt)
 	
 	case M_TIDL:
 		if (record->event.pressed) {
-		return MACRO( D(KC_RALT), T(KC_RBRC), U(KC_RALT), T(KC_SPACE), END );
+		return MACRO( D(RALT), T(RBRC), U(RALT), T(SPACE), END );
 	  }
 	  break;
 	  
 	case M_CART:
 		if (record->event.pressed) {
-		return MACRO( D(KC_RSFT), T(KC_RBRC), U(KC_RSFT), T(KC_SPACE), END );
+		return MACRO( D(RSFT), T(RBRC), U(RSFT), T(SPACE), END );
 	  }
 	  break;
 	  
