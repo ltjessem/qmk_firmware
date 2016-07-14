@@ -86,7 +86,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  */
 [_RAISE] = {
   {S(KC_GRV),	KC_1,		KC_2,		KC_3,		KC_4,		KC_5,		KC_6,		KC_7,		KC_8,		KC_9,			KC_0,		KC_EQL},
-  {KC_TAB,		_______,	_______,	_______,	_______,	_______,	_______,	_______,	_______,	_______,		M_CART,		M_TIDL},
+  {KC_TAB,		_______,	_______,	_______,	_______,	_______,	_______,	_______,	_______,	_______,		M(M_CART),		M(M_TIDL)},
   {KC_CAPS,		KC_F11, 	KC_F12,		_______,	_______,	_______,	_______,	_______,	KC_NUBS,	LSFT(KC_NUBS),	KC_NUHS,	_______},
   {_______,		_______, 	_______, 	_______, 	_______, 	KC_INS, 	KC_INS, 	_______, 	KC_HOME, 	KC_PGDN,		KC_PGUP, 	KC_END}
 },	
